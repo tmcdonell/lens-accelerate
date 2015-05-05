@@ -1,3 +1,4 @@
+{-# LANGUAGE CPP                   #-}
 {-# LANGUAGE FlexibleContexts      #-}
 {-# LANGUAGE FlexibleInstances     #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
@@ -21,6 +22,16 @@ module Data.Array.Accelerate.Control.Lens.Tuple ()
 import Control.Lens
 import Control.Lens.Tuple                               as L
 import Data.Array.Accelerate                            as A
+
+
+#if defined(MIN_VERSION_accelerate) && !MIN_VERSION_accelerate(0,16,0)
+-- Instances that missed the 0.15* Hackage release
+instance Unlift Exp (Exp e) where
+  unlift = id
+
+instance Unlift Acc (Acc a) where
+  unlift = id
+#endif
 
 
 -- Field1
