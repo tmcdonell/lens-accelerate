@@ -26,6 +26,13 @@ library
     , accelerate           >= 0.15
     , lens                 >= 4         && < 5
 
+  ghc-options:          -Wall
+
   hs-source-dirs:       src
   default-language:     Haskell2010
+
+
+source-repository head
+  Type:                 git
+  Location:             git://github.com/tmcdonell/lens-accelerate.git
 
