@@ -201,7 +201,7 @@ liftLens
     -> l
     -> Exp (Plain s)
     -> f (Exp (Plain t))
-liftLens l f (unlift -> x) = lift <$> l f x
+liftLens l f (unlift -> x) = lift `fmap` l f x
 
 
 -- | Sink a unary functor from 'Exp'
