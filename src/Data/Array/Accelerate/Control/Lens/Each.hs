@@ -13,8 +13,11 @@
 --
 ----------------------------------------------------------------------------
 
-module Data.Array.Accelerate.Control.Lens.Each
-  where
+module Data.Array.Accelerate.Control.Lens.Each (
+
+  module Control.Lens.Each
+
+) where
 
 import Control.Lens.Each
 import Control.Lens.Traversal
