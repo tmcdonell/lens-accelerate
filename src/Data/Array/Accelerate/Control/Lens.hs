@@ -12,7 +12,10 @@
 
 module Data.Array.Accelerate.Control.Lens (
 
+  module Control.Lens
+
 ) where
 
+import Control.Lens
 import Data.Array.Accelerate.Control.Lens.Tuple ()      -- instances only
 

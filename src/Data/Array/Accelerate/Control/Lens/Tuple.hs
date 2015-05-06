@@ -16,8 +16,11 @@
 --
 ----------------------------------------------------------------------------
 
-module Data.Array.Accelerate.Control.Lens.Tuple ()
-  where
+module Data.Array.Accelerate.Control.Lens.Tuple (
+
+  module Control.Lens.Tuple
+
+) where
 
 import Control.Lens
 import Control.Lens.Tuple                               as L
