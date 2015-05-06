@@ -23,7 +23,7 @@ module Data.Array.Accelerate.Control.Lens.Tuple (
 ) where
 
 import Control.Lens
-import Control.Lens.Tuple                               as L
+import Control.Lens.Tuple
 import Data.Array.Accelerate                            as A
 
 
@@ -43,53 +43,53 @@ instance Unlift Acc (Acc a) where
 -- ------
 
 instance (Elt a, Elt a', Elt b) => Field1 (Exp (a,b)) (Exp (a',b)) (Exp a) (Exp a') where
-  _1 f = liftLens (L._1 :: Lens (Exp a, Exp b) (Exp a', Exp b) (Exp a) (Exp a')) (fsink1 f)
+  _1 f = liftLens (_1 :: Lens (Exp a, Exp b) (Exp a', Exp b) (Exp a) (Exp a')) (fsink1 f)
 
 instance (Elt a, Elt a', Elt b, Elt c) => Field1 (Exp (a,b,c)) (Exp (a',b,c)) (Exp a) (Exp a') where
-  _1 f = liftLens (L._1 :: Lens (Exp a, Exp b, Exp c) (Exp a', Exp b, Exp c) (Exp a) (Exp a')) (fsink1 f)
+  _1 f = liftLens (_1 :: Lens (Exp a, Exp b, Exp c) (Exp a', Exp b, Exp c) (Exp a) (Exp a')) (fsink1 f)
 
 instance (Elt a, Elt a', Elt b, Elt c, Elt d) => Field1 (Exp (a,b,c,d)) (Exp (a',b,c,d)) (Exp a) (Exp a') where
-  _1 f = liftLens (L._1 :: Lens (Exp a, Exp b, Exp c, Exp d) (Exp a', Exp b, Exp c, Exp d) (Exp a) (Exp a')) (fsink1 f)
+  _1 f = liftLens (_1 :: Lens (Exp a, Exp b, Exp c, Exp d) (Exp a', Exp b, Exp c, Exp d) (Exp a) (Exp a')) (fsink1 f)
 
 instance (Elt a, Elt a', Elt b, Elt c, Elt d, Elt e) => Field1 (Exp (a,b,c,d,e)) (Exp (a',b,c,d,e)) (Exp a) (Exp a') where
-  _1 f = liftLens (L._1 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e) (Exp a', Exp b, Exp c, Exp d, Exp e) (Exp a) (Exp a')) (fsink1 f)
+  _1 f = liftLens (_1 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e) (Exp a', Exp b, Exp c, Exp d, Exp e) (Exp a) (Exp a')) (fsink1 f)
 
 instance (Elt a, Elt a', Elt b, Elt c, Elt d, Elt e, Elt f) => Field1 (Exp (a,b,c,d,e,f)) (Exp (a',b,c,d,e,f)) (Exp a) (Exp a') where
-  _1 f = liftLens (L._1 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f) (Exp a', Exp b, Exp c, Exp d, Exp e, Exp f) (Exp a) (Exp a')) (fsink1 f)
+  _1 f = liftLens (_1 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f) (Exp a', Exp b, Exp c, Exp d, Exp e, Exp f) (Exp a) (Exp a')) (fsink1 f)
 
 instance (Elt a, Elt a', Elt b, Elt c, Elt d, Elt e, Elt f, Elt g) => Field1 (Exp (a,b,c,d,e,f,g)) (Exp (a',b,c,d,e,f,g)) (Exp a) (Exp a') where
-  _1 f = liftLens (L._1 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g) (Exp a', Exp b, Exp c, Exp d, Exp e, Exp f, Exp g) (Exp a) (Exp a')) (fsink1 f)
+  _1 f = liftLens (_1 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g) (Exp a', Exp b, Exp c, Exp d, Exp e, Exp f, Exp g) (Exp a) (Exp a')) (fsink1 f)
 
 instance (Elt a, Elt a', Elt b, Elt c, Elt d, Elt e, Elt f, Elt g, Elt h) => Field1 (Exp (a,b,c,d,e,f,g,h)) (Exp (a',b,c,d,e,f,g,h)) (Exp a) (Exp a') where
-  _1 f = liftLens (L._1 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h) (Exp a', Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h) (Exp a) (Exp a')) (fsink1 f)
+  _1 f = liftLens (_1 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h) (Exp a', Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h) (Exp a) (Exp a')) (fsink1 f)
 
 instance (Elt a, Elt a', Elt b, Elt c, Elt d, Elt e, Elt f, Elt g, Elt h, Elt i) => Field1 (Exp (a,b,c,d,e,f,g,h,i)) (Exp (a',b,c,d,e,f,g,h,i)) (Exp a) (Exp a') where
-  _1 f = liftLens (L._1 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h, Exp i) (Exp a', Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h, Exp i) (Exp a) (Exp a')) (fsink1 f)
+  _1 f = liftLens (_1 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h, Exp i) (Exp a', Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h, Exp i) (Exp a) (Exp a')) (fsink1 f)
 
 
 instance (Arrays a, Arrays a', Arrays b) => Field1 (Acc (a,b)) (Acc (a',b)) (Acc a) (Acc a') where
-  _1 f = liftLens (L._1 :: Lens (Acc a, Acc b) (Acc a', Acc b) (Acc a) (Acc a')) (fsink1 f)
+  _1 f = liftLens (_1 :: Lens (Acc a, Acc b) (Acc a', Acc b) (Acc a) (Acc a')) (fsink1 f)
 
 instance (Arrays a, Arrays a', Arrays b, Arrays c) => Field1 (Acc (a,b,c)) (Acc (a',b,c)) (Acc a) (Acc a') where
-  _1 f = liftLens (L._1 :: Lens (Acc a, Acc b, Acc c) (Acc a', Acc b, Acc c) (Acc a) (Acc a')) (fsink1 f)
+  _1 f = liftLens (_1 :: Lens (Acc a, Acc b, Acc c) (Acc a', Acc b, Acc c) (Acc a) (Acc a')) (fsink1 f)
 
 instance (Arrays a, Arrays a', Arrays b, Arrays c, Arrays d) => Field1 (Acc (a,b,c,d)) (Acc (a',b,c,d)) (Acc a) (Acc a') where
-  _1 f = liftLens (L._1 :: Lens (Acc a, Acc b, Acc c, Acc d) (Acc a', Acc b, Acc c, Acc d) (Acc a) (Acc a')) (fsink1 f)
+  _1 f = liftLens (_1 :: Lens (Acc a, Acc b, Acc c, Acc d) (Acc a', Acc b, Acc c, Acc d) (Acc a) (Acc a')) (fsink1 f)
 
 instance (Arrays a, Arrays a', Arrays b, Arrays c, Arrays d, Arrays e) => Field1 (Acc (a,b,c,d,e)) (Acc (a',b,c,d,e)) (Acc a) (Acc a') where
-  _1 f = liftLens (L._1 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e) (Acc a', Acc b, Acc c, Acc d, Acc e) (Acc a) (Acc a')) (fsink1 f)
+  _1 f = liftLens (_1 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e) (Acc a', Acc b, Acc c, Acc d, Acc e) (Acc a) (Acc a')) (fsink1 f)
 
 instance (Arrays a, Arrays a', Arrays b, Arrays c, Arrays d, Arrays e, Arrays f) => Field1 (Acc (a,b,c,d,e,f)) (Acc (a',b,c,d,e,f)) (Acc a) (Acc a') where
-  _1 f = liftLens (L._1 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f) (Acc a', Acc b, Acc c, Acc d, Acc e, Acc f) (Acc a) (Acc a')) (fsink1 f)
+  _1 f = liftLens (_1 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f) (Acc a', Acc b, Acc c, Acc d, Acc e, Acc f) (Acc a) (Acc a')) (fsink1 f)
 
 instance (Arrays a, Arrays a', Arrays b, Arrays c, Arrays d, Arrays e, Arrays f, Arrays g) => Field1 (Acc (a,b,c,d,e,f,g)) (Acc (a',b,c,d,e,f,g)) (Acc a) (Acc a') where
-  _1 f = liftLens (L._1 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g) (Acc a', Acc b, Acc c, Acc d, Acc e, Acc f, Acc g) (Acc a) (Acc a')) (fsink1 f)
+  _1 f = liftLens (_1 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g) (Acc a', Acc b, Acc c, Acc d, Acc e, Acc f, Acc g) (Acc a) (Acc a')) (fsink1 f)
 
 instance (Arrays a, Arrays a', Arrays b, Arrays c, Arrays d, Arrays e, Arrays f, Arrays g, Arrays h) => Field1 (Acc (a,b,c,d,e,f,g,h)) (Acc (a',b,c,d,e,f,g,h)) (Acc a) (Acc a') where
-  _1 f = liftLens (L._1 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h) (Acc a', Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h) (Acc a) (Acc a')) (fsink1 f)
+  _1 f = liftLens (_1 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h) (Acc a', Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h) (Acc a) (Acc a')) (fsink1 f)
 
 instance (Arrays a, Arrays a', Arrays b, Arrays c, Arrays d, Arrays e, Arrays f, Arrays g, Arrays h, Arrays i) => Field1 (Acc (a,b,c,d,e,f,g,h,i)) (Acc (a',b,c,d,e,f,g,h,i)) (Acc a) (Acc a') where
-  _1 f = liftLens (L._1 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h, Acc i) (Acc a', Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h, Acc i) (Acc a) (Acc a')) (fsink1 f)
+  _1 f = liftLens (_1 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h, Acc i) (Acc a', Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h, Acc i) (Acc a) (Acc a')) (fsink1 f)
 
 
 
@@ -97,256 +97,256 @@ instance (Arrays a, Arrays a', Arrays b, Arrays c, Arrays d, Arrays e, Arrays f,
 -- ------
 
 instance (Elt a, Elt b, Elt b') => Field2 (Exp (a,b)) (Exp (a,b')) (Exp b) (Exp b') where
-  _2 f = liftLens (L._2 :: Lens (Exp a, Exp b) (Exp a, Exp b') (Exp b) (Exp b')) (fsink1 f)
+  _2 f = liftLens (_2 :: Lens (Exp a, Exp b) (Exp a, Exp b') (Exp b) (Exp b')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt b', Elt c) => Field2 (Exp (a,b,c)) (Exp (a,b',c)) (Exp b) (Exp b') where
-  _2 f = liftLens (L._2 :: Lens (Exp a, Exp b, Exp c) (Exp a, Exp b', Exp c) (Exp b) (Exp b')) (fsink1 f)
+  _2 f = liftLens (_2 :: Lens (Exp a, Exp b, Exp c) (Exp a, Exp b', Exp c) (Exp b) (Exp b')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt b', Elt c, Elt d) => Field2 (Exp (a,b,c,d)) (Exp (a,b',c,d)) (Exp b) (Exp b') where
-  _2 f = liftLens (L._2 :: Lens (Exp a, Exp b, Exp c, Exp d) (Exp a, Exp b', Exp c, Exp d) (Exp b) (Exp b')) (fsink1 f)
+  _2 f = liftLens (_2 :: Lens (Exp a, Exp b, Exp c, Exp d) (Exp a, Exp b', Exp c, Exp d) (Exp b) (Exp b')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt b', Elt c, Elt d, Elt e) => Field2 (Exp (a,b,c,d,e)) (Exp (a,b',c,d,e)) (Exp b) (Exp b') where
-  _2 f = liftLens (L._2 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e) (Exp a, Exp b', Exp c, Exp d, Exp e) (Exp b) (Exp b')) (fsink1 f)
+  _2 f = liftLens (_2 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e) (Exp a, Exp b', Exp c, Exp d, Exp e) (Exp b) (Exp b')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt b', Elt c, Elt d, Elt e, Elt f) => Field2 (Exp (a,b,c,d,e,f)) (Exp (a,b',c,d,e,f)) (Exp b) (Exp b') where
-  _2 f = liftLens (L._2 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f) (Exp a, Exp b', Exp c, Exp d, Exp e, Exp f) (Exp b) (Exp b')) (fsink1 f)
+  _2 f = liftLens (_2 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f) (Exp a, Exp b', Exp c, Exp d, Exp e, Exp f) (Exp b) (Exp b')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt b', Elt c, Elt d, Elt e, Elt f, Elt g) => Field2 (Exp (a,b,c,d,e,f,g)) (Exp (a,b',c,d,e,f,g)) (Exp b) (Exp b') where
-  _2 f = liftLens (L._2 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g) (Exp a, Exp b', Exp c, Exp d, Exp e, Exp f, Exp g) (Exp b) (Exp b')) (fsink1 f)
+  _2 f = liftLens (_2 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g) (Exp a, Exp b', Exp c, Exp d, Exp e, Exp f, Exp g) (Exp b) (Exp b')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt b', Elt c, Elt d, Elt e, Elt f, Elt g, Elt h) => Field2 (Exp (a,b,c,d,e,f,g,h)) (Exp (a,b',c,d,e,f,g,h)) (Exp b) (Exp b') where
-  _2 f = liftLens (L._2 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h) (Exp a, Exp b', Exp c, Exp d, Exp e, Exp f, Exp g, Exp h) (Exp b) (Exp b')) (fsink1 f)
+  _2 f = liftLens (_2 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h) (Exp a, Exp b', Exp c, Exp d, Exp e, Exp f, Exp g, Exp h) (Exp b) (Exp b')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt b', Elt c, Elt d, Elt e, Elt f, Elt g, Elt h, Elt i) => Field2 (Exp (a,b,c,d,e,f,g,h,i)) (Exp (a,b',c,d,e,f,g,h,i)) (Exp b) (Exp b') where
-  _2 f = liftLens (L._2 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h, Exp i) (Exp a, Exp b', Exp c, Exp d, Exp e, Exp f, Exp g, Exp h, Exp i) (Exp b) (Exp b')) (fsink1 f)
+  _2 f = liftLens (_2 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h, Exp i) (Exp a, Exp b', Exp c, Exp d, Exp e, Exp f, Exp g, Exp h, Exp i) (Exp b) (Exp b')) (fsink1 f)
 
 
 instance (Arrays a, Arrays b, Arrays b') => Field2 (Acc (a,b)) (Acc (a,b')) (Acc b) (Acc b') where
-  _2 f = liftLens (L._2 :: Lens (Acc a, Acc b) (Acc a, Acc b') (Acc b) (Acc b')) (fsink1 f)
+  _2 f = liftLens (_2 :: Lens (Acc a, Acc b) (Acc a, Acc b') (Acc b) (Acc b')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays b', Arrays c) => Field2 (Acc (a,b,c)) (Acc (a,b',c)) (Acc b) (Acc b') where
-  _2 f = liftLens (L._2 :: Lens (Acc a, Acc b, Acc c) (Acc a, Acc b', Acc c) (Acc b) (Acc b')) (fsink1 f)
+  _2 f = liftLens (_2 :: Lens (Acc a, Acc b, Acc c) (Acc a, Acc b', Acc c) (Acc b) (Acc b')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays b', Arrays c, Arrays d) => Field2 (Acc (a,b,c,d)) (Acc (a,b',c,d)) (Acc b) (Acc b') where
-  _2 f = liftLens (L._2 :: Lens (Acc a, Acc b, Acc c, Acc d) (Acc a, Acc b', Acc c, Acc d) (Acc b) (Acc b')) (fsink1 f)
+  _2 f = liftLens (_2 :: Lens (Acc a, Acc b, Acc c, Acc d) (Acc a, Acc b', Acc c, Acc d) (Acc b) (Acc b')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays b', Arrays c, Arrays d, Arrays e) => Field2 (Acc (a,b,c,d,e)) (Acc (a,b',c,d,e)) (Acc b) (Acc b') where
-  _2 f = liftLens (L._2 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e) (Acc a, Acc b', Acc c, Acc d, Acc e) (Acc b) (Acc b')) (fsink1 f)
+  _2 f = liftLens (_2 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e) (Acc a, Acc b', Acc c, Acc d, Acc e) (Acc b) (Acc b')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays b', Arrays c, Arrays d, Arrays e, Arrays f) => Field2 (Acc (a,b,c,d,e,f)) (Acc (a,b',c,d,e,f)) (Acc b) (Acc b') where
-  _2 f = liftLens (L._2 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f) (Acc a, Acc b', Acc c, Acc d, Acc e, Acc f) (Acc b) (Acc b')) (fsink1 f)
+  _2 f = liftLens (_2 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f) (Acc a, Acc b', Acc c, Acc d, Acc e, Acc f) (Acc b) (Acc b')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays b', Arrays c, Arrays d, Arrays e, Arrays f, Arrays g) => Field2 (Acc (a,b,c,d,e,f,g)) (Acc (a,b',c,d,e,f,g)) (Acc b) (Acc b') where
-  _2 f = liftLens (L._2 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g) (Acc a, Acc b', Acc c, Acc d, Acc e, Acc f, Acc g) (Acc b) (Acc b')) (fsink1 f)
+  _2 f = liftLens (_2 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g) (Acc a, Acc b', Acc c, Acc d, Acc e, Acc f, Acc g) (Acc b) (Acc b')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays b', Arrays c, Arrays d, Arrays e, Arrays f, Arrays g, Arrays h) => Field2 (Acc (a,b,c,d,e,f,g,h)) (Acc (a,b',c,d,e,f,g,h)) (Acc b) (Acc b') where
-  _2 f = liftLens (L._2 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h) (Acc a, Acc b', Acc c, Acc d, Acc e, Acc f, Acc g, Acc h) (Acc b) (Acc b')) (fsink1 f)
+  _2 f = liftLens (_2 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h) (Acc a, Acc b', Acc c, Acc d, Acc e, Acc f, Acc g, Acc h) (Acc b) (Acc b')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays b', Arrays c, Arrays d, Arrays e, Arrays f, Arrays g, Arrays h, Arrays i) => Field2 (Acc (a,b,c,d,e,f,g,h,i)) (Acc (a,b',c,d,e,f,g,h,i)) (Acc b) (Acc b') where
-  _2 f = liftLens (L._2 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h, Acc i) (Acc a, Acc b', Acc c, Acc d, Acc e, Acc f, Acc g, Acc h, Acc i) (Acc b) (Acc b')) (fsink1 f)
+  _2 f = liftLens (_2 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h, Acc i) (Acc a, Acc b', Acc c, Acc d, Acc e, Acc f, Acc g, Acc h, Acc i) (Acc b) (Acc b')) (fsink1 f)
 
 
 -- Field3
 -- ------
 
 instance (Elt a, Elt b, Elt c, Elt c') => Field3 (Exp (a,b,c)) (Exp (a,b,c')) (Exp c) (Exp c') where
-  _3 f = liftLens (L._3 :: Lens (Exp a, Exp b, Exp c) (Exp a, Exp b, Exp c') (Exp c) (Exp c')) (fsink1 f)
+  _3 f = liftLens (_3 :: Lens (Exp a, Exp b, Exp c) (Exp a, Exp b, Exp c') (Exp c) (Exp c')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt c, Elt c', Elt d) => Field3 (Exp (a,b,c,d)) (Exp (a,b,c',d)) (Exp c) (Exp c') where
-  _3 f = liftLens (L._3 :: Lens (Exp a, Exp b, Exp c, Exp d) (Exp a, Exp b, Exp c', Exp d) (Exp c) (Exp c')) (fsink1 f)
+  _3 f = liftLens (_3 :: Lens (Exp a, Exp b, Exp c, Exp d) (Exp a, Exp b, Exp c', Exp d) (Exp c) (Exp c')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt c, Elt c', Elt d, Elt e) => Field3 (Exp (a,b,c,d,e)) (Exp (a,b,c',d,e)) (Exp c) (Exp c') where
-  _3 f = liftLens (L._3 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e) (Exp a, Exp b, Exp c', Exp d, Exp e) (Exp c) (Exp c')) (fsink1 f)
+  _3 f = liftLens (_3 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e) (Exp a, Exp b, Exp c', Exp d, Exp e) (Exp c) (Exp c')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt c, Elt c', Elt d, Elt e, Elt f) => Field3 (Exp (a,b,c,d,e,f)) (Exp (a,b,c',d,e,f)) (Exp c) (Exp c') where
-  _3 f = liftLens (L._3 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f) (Exp a, Exp b, Exp c', Exp d, Exp e, Exp f) (Exp c) (Exp c')) (fsink1 f)
+  _3 f = liftLens (_3 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f) (Exp a, Exp b, Exp c', Exp d, Exp e, Exp f) (Exp c) (Exp c')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt c, Elt c', Elt d, Elt e, Elt f, Elt g) => Field3 (Exp (a,b,c,d,e,f,g)) (Exp (a,b,c',d,e,f,g)) (Exp c) (Exp c') where
-  _3 f = liftLens (L._3 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g) (Exp a, Exp b, Exp c', Exp d, Exp e, Exp f, Exp g) (Exp c) (Exp c')) (fsink1 f)
+  _3 f = liftLens (_3 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g) (Exp a, Exp b, Exp c', Exp d, Exp e, Exp f, Exp g) (Exp c) (Exp c')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt c, Elt c', Elt d, Elt e, Elt f, Elt g, Elt h) => Field3 (Exp (a,b,c,d,e,f,g,h)) (Exp (a,b,c',d,e,f,g,h)) (Exp c) (Exp c') where
-  _3 f = liftLens (L._3 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h) (Exp a, Exp b, Exp c', Exp d, Exp e, Exp f, Exp g, Exp h) (Exp c) (Exp c')) (fsink1 f)
+  _3 f = liftLens (_3 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h) (Exp a, Exp b, Exp c', Exp d, Exp e, Exp f, Exp g, Exp h) (Exp c) (Exp c')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt c, Elt c', Elt d, Elt e, Elt f, Elt g, Elt h, Elt i) => Field3 (Exp (a,b,c,d,e,f,g,h,i)) (Exp (a,b,c',d,e,f,g,h,i)) (Exp c) (Exp c') where
-  _3 f = liftLens (L._3 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h, Exp i) (Exp a, Exp b, Exp c', Exp d, Exp e, Exp f, Exp g, Exp h, Exp i) (Exp c) (Exp c')) (fsink1 f)
+  _3 f = liftLens (_3 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h, Exp i) (Exp a, Exp b, Exp c', Exp d, Exp e, Exp f, Exp g, Exp h, Exp i) (Exp c) (Exp c')) (fsink1 f)
 
 
 instance (Arrays a, Arrays b, Arrays c, Arrays c') => Field3 (Acc (a,b,c)) (Acc (a,b,c')) (Acc c) (Acc c') where
-  _3 f = liftLens (L._3 :: Lens (Acc a, Acc b, Acc c) (Acc a, Acc b, Acc c') (Acc c) (Acc c')) (fsink1 f)
+  _3 f = liftLens (_3 :: Lens (Acc a, Acc b, Acc c) (Acc a, Acc b, Acc c') (Acc c) (Acc c')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays c, Arrays c', Arrays d) => Field3 (Acc (a,b,c,d)) (Acc (a,b,c',d)) (Acc c) (Acc c') where
-  _3 f = liftLens (L._3 :: Lens (Acc a, Acc b, Acc c, Acc d) (Acc a, Acc b, Acc c', Acc d) (Acc c) (Acc c')) (fsink1 f)
+  _3 f = liftLens (_3 :: Lens (Acc a, Acc b, Acc c, Acc d) (Acc a, Acc b, Acc c', Acc d) (Acc c) (Acc c')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays c, Arrays c', Arrays d, Arrays e) => Field3 (Acc (a,b,c,d,e)) (Acc (a,b,c',d,e)) (Acc c) (Acc c') where
-  _3 f = liftLens (L._3 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e) (Acc a, Acc b, Acc c', Acc d, Acc e) (Acc c) (Acc c')) (fsink1 f)
+  _3 f = liftLens (_3 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e) (Acc a, Acc b, Acc c', Acc d, Acc e) (Acc c) (Acc c')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays c, Arrays c', Arrays d, Arrays e, Arrays f) => Field3 (Acc (a,b,c,d,e,f)) (Acc (a,b,c',d,e,f)) (Acc c) (Acc c') where
-  _3 f = liftLens (L._3 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f) (Acc a, Acc b, Acc c', Acc d, Acc e, Acc f) (Acc c) (Acc c')) (fsink1 f)
+  _3 f = liftLens (_3 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f) (Acc a, Acc b, Acc c', Acc d, Acc e, Acc f) (Acc c) (Acc c')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays c, Arrays c', Arrays d, Arrays e, Arrays f, Arrays g) => Field3 (Acc (a,b,c,d,e,f,g)) (Acc (a,b,c',d,e,f,g)) (Acc c) (Acc c') where
-  _3 f = liftLens (L._3 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g) (Acc a, Acc b, Acc c', Acc d, Acc e, Acc f, Acc g) (Acc c) (Acc c')) (fsink1 f)
+  _3 f = liftLens (_3 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g) (Acc a, Acc b, Acc c', Acc d, Acc e, Acc f, Acc g) (Acc c) (Acc c')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays c, Arrays c', Arrays d, Arrays e, Arrays f, Arrays g, Arrays h) => Field3 (Acc (a,b,c,d,e,f,g,h)) (Acc (a,b,c',d,e,f,g,h)) (Acc c) (Acc c') where
-  _3 f = liftLens (L._3 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h) (Acc a, Acc b, Acc c', Acc d, Acc e, Acc f, Acc g, Acc h) (Acc c) (Acc c')) (fsink1 f)
+  _3 f = liftLens (_3 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h) (Acc a, Acc b, Acc c', Acc d, Acc e, Acc f, Acc g, Acc h) (Acc c) (Acc c')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays c, Arrays c', Arrays d, Arrays e, Arrays f, Arrays g, Arrays h, Arrays i) => Field3 (Acc (a,b,c,d,e,f,g,h,i)) (Acc (a,b,c',d,e,f,g,h,i)) (Acc c) (Acc c') where
-  _3 f = liftLens (L._3 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h, Acc i) (Acc a, Acc b, Acc c', Acc d, Acc e, Acc f, Acc g, Acc h, Acc i) (Acc c) (Acc c')) (fsink1 f)
+  _3 f = liftLens (_3 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h, Acc i) (Acc a, Acc b, Acc c', Acc d, Acc e, Acc f, Acc g, Acc h, Acc i) (Acc c) (Acc c')) (fsink1 f)
 
 
 -- Field4
 -- ------
 
 instance (Elt a, Elt b, Elt c, Elt d, Elt d') => Field4 (Exp (a,b,c,d)) (Exp (a,b,c,d')) (Exp d) (Exp d') where
-  _4 f = liftLens (L._4 :: Lens (Exp a, Exp b, Exp c, Exp d) (Exp a, Exp b, Exp c, Exp d') (Exp d) (Exp d')) (fsink1 f)
+  _4 f = liftLens (_4 :: Lens (Exp a, Exp b, Exp c, Exp d) (Exp a, Exp b, Exp c, Exp d') (Exp d) (Exp d')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt c, Elt d, Elt d', Elt e) => Field4 (Exp (a,b,c,d,e)) (Exp (a,b,c,d',e)) (Exp d) (Exp d') where
-  _4 f = liftLens (L._4 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e) (Exp a, Exp b, Exp c, Exp d', Exp e) (Exp d) (Exp d')) (fsink1 f)
+  _4 f = liftLens (_4 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e) (Exp a, Exp b, Exp c, Exp d', Exp e) (Exp d) (Exp d')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt c, Elt d, Elt d', Elt e, Elt f) => Field4 (Exp (a,b,c,d,e,f)) (Exp (a,b,c,d',e,f)) (Exp d) (Exp d') where
-  _4 f = liftLens (L._4 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f) (Exp a, Exp b, Exp c, Exp d', Exp e, Exp f) (Exp d) (Exp d')) (fsink1 f)
+  _4 f = liftLens (_4 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f) (Exp a, Exp b, Exp c, Exp d', Exp e, Exp f) (Exp d) (Exp d')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt c, Elt d, Elt d', Elt e, Elt f, Elt g) => Field4 (Exp (a,b,c,d,e,f,g)) (Exp (a,b,c,d',e,f,g)) (Exp d) (Exp d') where
-  _4 f = liftLens (L._4 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g) (Exp a, Exp b, Exp c, Exp d', Exp e, Exp f, Exp g) (Exp d) (Exp d')) (fsink1 f)
+  _4 f = liftLens (_4 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g) (Exp a, Exp b, Exp c, Exp d', Exp e, Exp f, Exp g) (Exp d) (Exp d')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt c, Elt d, Elt d', Elt e, Elt f, Elt g, Elt h) => Field4 (Exp (a,b,c,d,e,f,g,h)) (Exp (a,b,c,d',e,f,g,h)) (Exp d) (Exp d') where
-  _4 f = liftLens (L._4 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h) (Exp a, Exp b, Exp c, Exp d', Exp e, Exp f, Exp g, Exp h) (Exp d) (Exp d')) (fsink1 f)
+  _4 f = liftLens (_4 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h) (Exp a, Exp b, Exp c, Exp d', Exp e, Exp f, Exp g, Exp h) (Exp d) (Exp d')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt c, Elt d, Elt d', Elt e, Elt f, Elt g, Elt h, Elt i) => Field4 (Exp (a,b,c,d,e,f,g,h,i)) (Exp (a,b,c,d',e,f,g,h,i)) (Exp d) (Exp d') where
-  _4 f = liftLens (L._4 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h, Exp i) (Exp a, Exp b, Exp c, Exp d', Exp e, Exp f, Exp g, Exp h, Exp i) (Exp d) (Exp d')) (fsink1 f)
+  _4 f = liftLens (_4 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h, Exp i) (Exp a, Exp b, Exp c, Exp d', Exp e, Exp f, Exp g, Exp h, Exp i) (Exp d) (Exp d')) (fsink1 f)
 
 
 instance (Arrays a, Arrays b, Arrays c, Arrays d, Arrays d') => Field4 (Acc (a,b,c,d)) (Acc (a,b,c,d')) (Acc d) (Acc d') where
-  _4 f = liftLens (L._4 :: Lens (Acc a, Acc b, Acc c, Acc d) (Acc a, Acc b, Acc c, Acc d') (Acc d) (Acc d')) (fsink1 f)
+  _4 f = liftLens (_4 :: Lens (Acc a, Acc b, Acc c, Acc d) (Acc a, Acc b, Acc c, Acc d') (Acc d) (Acc d')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays c, Arrays d, Arrays d', Arrays e) => Field4 (Acc (a,b,c,d,e)) (Acc (a,b,c,d',e)) (Acc d) (Acc d') where
-  _4 f = liftLens (L._4 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e) (Acc a, Acc b, Acc c, Acc d', Acc e) (Acc d) (Acc d')) (fsink1 f)
+  _4 f = liftLens (_4 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e) (Acc a, Acc b, Acc c, Acc d', Acc e) (Acc d) (Acc d')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays c, Arrays d, Arrays d', Arrays e, Arrays f) => Field4 (Acc (a,b,c,d,e,f)) (Acc (a,b,c,d',e,f)) (Acc d) (Acc d') where
-  _4 f = liftLens (L._4 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f) (Acc a, Acc b, Acc c, Acc d', Acc e, Acc f) (Acc d) (Acc d')) (fsink1 f)
+  _4 f = liftLens (_4 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f) (Acc a, Acc b, Acc c, Acc d', Acc e, Acc f) (Acc d) (Acc d')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays c, Arrays d, Arrays d', Arrays e, Arrays f, Arrays g) => Field4 (Acc (a,b,c,d,e,f,g)) (Acc (a,b,c,d',e,f,g)) (Acc d) (Acc d') where
-  _4 f = liftLens (L._4 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g) (Acc a, Acc b, Acc c, Acc d', Acc e, Acc f, Acc g) (Acc d) (Acc d')) (fsink1 f)
+  _4 f = liftLens (_4 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g) (Acc a, Acc b, Acc c, Acc d', Acc e, Acc f, Acc g) (Acc d) (Acc d')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays c, Arrays d, Arrays d', Arrays e, Arrays f, Arrays g, Arrays h) => Field4 (Acc (a,b,c,d,e,f,g,h)) (Acc (a,b,c,d',e,f,g,h)) (Acc d) (Acc d') where
-  _4 f = liftLens (L._4 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h) (Acc a, Acc b, Acc c, Acc d', Acc e, Acc f, Acc g, Acc h) (Acc d) (Acc d')) (fsink1 f)
+  _4 f = liftLens (_4 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h) (Acc a, Acc b, Acc c, Acc d', Acc e, Acc f, Acc g, Acc h) (Acc d) (Acc d')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays c, Arrays d, Arrays d', Arrays e, Arrays f, Arrays g, Arrays h, Arrays i) => Field4 (Acc (a,b,c,d,e,f,g,h,i)) (Acc (a,b,c,d',e,f,g,h,i)) (Acc d) (Acc d') where
-  _4 f = liftLens (L._4 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h, Acc i) (Acc a, Acc b, Acc c, Acc d', Acc e, Acc f, Acc g, Acc h, Acc i) (Acc d) (Acc d')) (fsink1 f)
+  _4 f = liftLens (_4 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h, Acc i) (Acc a, Acc b, Acc c, Acc d', Acc e, Acc f, Acc g, Acc h, Acc i) (Acc d) (Acc d')) (fsink1 f)
 
 
 -- Field5
 -- ------
 
 instance (Elt a, Elt b, Elt c, Elt d, Elt e, Elt e') => Field5 (Exp (a,b,c,d,e)) (Exp (a,b,c,d,e')) (Exp e) (Exp e') where
-  _5 f = liftLens (L._5 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e) (Exp a, Exp b, Exp c, Exp d, Exp e') (Exp e) (Exp e')) (fsink1 f)
+  _5 f = liftLens (_5 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e) (Exp a, Exp b, Exp c, Exp d, Exp e') (Exp e) (Exp e')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt c, Elt d, Elt e, Elt e', Elt f) => Field5 (Exp (a,b,c,d,e,f)) (Exp (a,b,c,d,e',f)) (Exp e) (Exp e') where
-  _5 f = liftLens (L._5 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f) (Exp a, Exp b, Exp c, Exp d, Exp e', Exp f) (Exp e) (Exp e')) (fsink1 f)
+  _5 f = liftLens (_5 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f) (Exp a, Exp b, Exp c, Exp d, Exp e', Exp f) (Exp e) (Exp e')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt c, Elt d, Elt e, Elt e', Elt f, Elt g) => Field5 (Exp (a,b,c,d,e,f,g)) (Exp (a,b,c,d,e',f,g)) (Exp e) (Exp e') where
-  _5 f = liftLens (L._5 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g) (Exp a, Exp b, Exp c, Exp d, Exp e', Exp f, Exp g) (Exp e) (Exp e')) (fsink1 f)
+  _5 f = liftLens (_5 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g) (Exp a, Exp b, Exp c, Exp d, Exp e', Exp f, Exp g) (Exp e) (Exp e')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt c, Elt d, Elt e, Elt e', Elt f, Elt g, Elt h) => Field5 (Exp (a,b,c,d,e,f,g,h)) (Exp (a,b,c,d,e',f,g,h)) (Exp e) (Exp e') where
-  _5 f = liftLens (L._5 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h) (Exp a, Exp b, Exp c, Exp d, Exp e', Exp f, Exp g, Exp h) (Exp e) (Exp e')) (fsink1 f)
+  _5 f = liftLens (_5 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h) (Exp a, Exp b, Exp c, Exp d, Exp e', Exp f, Exp g, Exp h) (Exp e) (Exp e')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt c, Elt d, Elt e, Elt e', Elt f, Elt g, Elt h, Elt i) => Field5 (Exp (a,b,c,d,e,f,g,h,i)) (Exp (a,b,c,d,e',f,g,h,i)) (Exp e) (Exp e') where
-  _5 f = liftLens (L._5 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h, Exp i) (Exp a, Exp b, Exp c, Exp d, Exp e', Exp f, Exp g, Exp h, Exp i) (Exp e) (Exp e')) (fsink1 f)
+  _5 f = liftLens (_5 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h, Exp i) (Exp a, Exp b, Exp c, Exp d, Exp e', Exp f, Exp g, Exp h, Exp i) (Exp e) (Exp e')) (fsink1 f)
 
 
 instance (Arrays a, Arrays b, Arrays c, Arrays d, Arrays e, Arrays e') => Field5 (Acc (a,b,c,d,e)) (Acc (a,b,c,d,e')) (Acc e) (Acc e') where
-  _5 f = liftLens (L._5 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e) (Acc a, Acc b, Acc c, Acc d, Acc e') (Acc e) (Acc e')) (fsink1 f)
+  _5 f = liftLens (_5 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e) (Acc a, Acc b, Acc c, Acc d, Acc e') (Acc e) (Acc e')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays c, Arrays d, Arrays e, Arrays e', Arrays f) => Field5 (Acc (a,b,c,d,e,f)) (Acc (a,b,c,d,e',f)) (Acc e) (Acc e') where
-  _5 f = liftLens (L._5 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f) (Acc a, Acc b, Acc c, Acc d, Acc e', Acc f) (Acc e) (Acc e')) (fsink1 f)
+  _5 f = liftLens (_5 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f) (Acc a, Acc b, Acc c, Acc d, Acc e', Acc f) (Acc e) (Acc e')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays c, Arrays d, Arrays e, Arrays e', Arrays f, Arrays g) => Field5 (Acc (a,b,c,d,e,f,g)) (Acc (a,b,c,d,e',f,g)) (Acc e) (Acc e') where
-  _5 f = liftLens (L._5 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g) (Acc a, Acc b, Acc c, Acc d, Acc e', Acc f, Acc g) (Acc e) (Acc e')) (fsink1 f)
+  _5 f = liftLens (_5 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g) (Acc a, Acc b, Acc c, Acc d, Acc e', Acc f, Acc g) (Acc e) (Acc e')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays c, Arrays d, Arrays e, Arrays e', Arrays f, Arrays g, Arrays h) => Field5 (Acc (a,b,c,d,e,f,g,h)) (Acc (a,b,c,d,e',f,g,h)) (Acc e) (Acc e') where
-  _5 f = liftLens (L._5 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h) (Acc a, Acc b, Acc c, Acc d, Acc e', Acc f, Acc g, Acc h) (Acc e) (Acc e')) (fsink1 f)
+  _5 f = liftLens (_5 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h) (Acc a, Acc b, Acc c, Acc d, Acc e', Acc f, Acc g, Acc h) (Acc e) (Acc e')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays c, Arrays d, Arrays e, Arrays e', Arrays f, Arrays g, Arrays h, Arrays i) => Field5 (Acc (a,b,c,d,e,f,g,h,i)) (Acc (a,b,c,d,e',f,g,h,i)) (Acc e) (Acc e') where
-  _5 f = liftLens (L._5 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h, Acc i) (Acc a, Acc b, Acc c, Acc d, Acc e', Acc f, Acc g, Acc h, Acc i) (Acc e) (Acc e')) (fsink1 f)
+  _5 f = liftLens (_5 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h, Acc i) (Acc a, Acc b, Acc c, Acc d, Acc e', Acc f, Acc g, Acc h, Acc i) (Acc e) (Acc e')) (fsink1 f)
 
 
 -- Field6
 -- ------
 
 instance (Elt a, Elt b, Elt c, Elt d, Elt e, Elt f, Elt f') => Field6 (Exp (a,b,c,d,e,f)) (Exp (a,b,c,d,e,f')) (Exp f) (Exp f') where
-  _6 f = liftLens (L._6 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f) (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f') (Exp f) (Exp f')) (fsink1 f)
+  _6 f = liftLens (_6 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f) (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f') (Exp f) (Exp f')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt c, Elt d, Elt e, Elt f, Elt f', Elt g) => Field6 (Exp (a,b,c,d,e,f,g)) (Exp (a,b,c,d,e,f',g)) (Exp f) (Exp f') where
-  _6 f = liftLens (L._6 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g) (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f', Exp g) (Exp f) (Exp f')) (fsink1 f)
+  _6 f = liftLens (_6 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g) (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f', Exp g) (Exp f) (Exp f')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt c, Elt d, Elt e, Elt f, Elt f', Elt g, Elt h) => Field6 (Exp (a,b,c,d,e,f,g,h)) (Exp (a,b,c,d,e,f',g,h)) (Exp f) (Exp f') where
-  _6 f = liftLens (L._6 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h) (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f', Exp g, Exp h) (Exp f) (Exp f')) (fsink1 f)
+  _6 f = liftLens (_6 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h) (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f', Exp g, Exp h) (Exp f) (Exp f')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt c, Elt d, Elt e, Elt f, Elt f', Elt g, Elt h, Elt i) => Field6 (Exp (a,b,c,d,e,f,g,h,i)) (Exp (a,b,c,d,e,f',g,h,i)) (Exp f) (Exp f') where
-  _6 f = liftLens (L._6 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h, Exp i) (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f', Exp g, Exp h, Exp i) (Exp f) (Exp f')) (fsink1 f)
+  _6 f = liftLens (_6 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h, Exp i) (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f', Exp g, Exp h, Exp i) (Exp f) (Exp f')) (fsink1 f)
 
 
 instance (Arrays a, Arrays b, Arrays c, Arrays d, Arrays e, Arrays f, Arrays f') => Field6 (Acc (a,b,c,d,e,f)) (Acc (a,b,c,d,e,f')) (Acc f) (Acc f') where
-  _6 f = liftLens (L._6 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f) (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f') (Acc f) (Acc f')) (fsink1 f)
+  _6 f = liftLens (_6 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f) (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f') (Acc f) (Acc f')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays c, Arrays d, Arrays e, Arrays f, Arrays f', Arrays g) => Field6 (Acc (a,b,c,d,e,f,g)) (Acc (a,b,c,d,e,f',g)) (Acc f) (Acc f') where
-  _6 f = liftLens (L._6 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g) (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f', Acc g) (Acc f) (Acc f')) (fsink1 f)
+  _6 f = liftLens (_6 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g) (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f', Acc g) (Acc f) (Acc f')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays c, Arrays d, Arrays e, Arrays f, Arrays f', Arrays g, Arrays h) => Field6 (Acc (a,b,c,d,e,f,g,h)) (Acc (a,b,c,d,e,f',g,h)) (Acc f) (Acc f') where
-  _6 f = liftLens (L._6 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h) (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f', Acc g, Acc h) (Acc f) (Acc f')) (fsink1 f)
+  _6 f = liftLens (_6 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h) (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f', Acc g, Acc h) (Acc f) (Acc f')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays c, Arrays d, Arrays e, Arrays f, Arrays f', Arrays g, Arrays h, Arrays i) => Field6 (Acc (a,b,c,d,e,f,g,h,i)) (Acc (a,b,c,d,e,f',g,h,i)) (Acc f) (Acc f') where
-  _6 f = liftLens (L._6 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h, Acc i) (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f', Acc g, Acc h, Acc i) (Acc f) (Acc f')) (fsink1 f)
+  _6 f = liftLens (_6 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h, Acc i) (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f', Acc g, Acc h, Acc i) (Acc f) (Acc f')) (fsink1 f)
 
 
 -- Field7
 -- ------
 
 instance (Elt a, Elt b, Elt c, Elt d, Elt e, Elt f, Elt g, Elt g') => Field7 (Exp (a,b,c,d,e,f,g)) (Exp (a,b,c,d,e,f,g')) (Exp g) (Exp g') where
-  _7 f = liftLens (L._7 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g) (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g') (Exp g) (Exp g')) (fsink1 f)
+  _7 f = liftLens (_7 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g) (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g') (Exp g) (Exp g')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt c, Elt d, Elt e, Elt f, Elt g, Elt g', Elt h) => Field7 (Exp (a,b,c,d,e,f,g,h)) (Exp (a,b,c,d,e,f,g',h)) (Exp g) (Exp g') where
-  _7 f = liftLens (L._7 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h) (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g', Exp h) (Exp g) (Exp g')) (fsink1 f)
+  _7 f = liftLens (_7 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h) (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g', Exp h) (Exp g) (Exp g')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt c, Elt d, Elt e, Elt f, Elt g, Elt g', Elt h, Elt i) => Field7 (Exp (a,b,c,d,e,f,g,h,i)) (Exp (a,b,c,d,e,f,g',h,i)) (Exp g) (Exp g') where
-  _7 f = liftLens (L._7 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h, Exp i) (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g', Exp h, Exp i) (Exp g) (Exp g')) (fsink1 f)
+  _7 f = liftLens (_7 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h, Exp i) (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g', Exp h, Exp i) (Exp g) (Exp g')) (fsink1 f)
 
 
 instance (Arrays a, Arrays b, Arrays c, Arrays d, Arrays e, Arrays f, Arrays g, Arrays g') => Field7 (Acc (a,b,c,d,e,f,g)) (Acc (a,b,c,d,e,f,g')) (Acc g) (Acc g') where
-  _7 f = liftLens (L._7 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g) (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g') (Acc g) (Acc g')) (fsink1 f)
+  _7 f = liftLens (_7 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g) (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g') (Acc g) (Acc g')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays c, Arrays d, Arrays e, Arrays f, Arrays g, Arrays g', Arrays h) => Field7 (Acc (a,b,c,d,e,f,g,h)) (Acc (a,b,c,d,e,f,g',h)) (Acc g) (Acc g') where
-  _7 f = liftLens (L._7 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h) (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g', Acc h) (Acc g) (Acc g')) (fsink1 f)
+  _7 f = liftLens (_7 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h) (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g', Acc h) (Acc g) (Acc g')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays c, Arrays d, Arrays e, Arrays f, Arrays g, Arrays g', Arrays h, Arrays i) => Field7 (Acc (a,b,c,d,e,f,g,h,i)) (Acc (a,b,c,d,e,f,g',h,i)) (Acc g) (Acc g') where
-  _7 f = liftLens (L._7 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h, Acc i) (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g', Acc h, Acc i) (Acc g) (Acc g')) (fsink1 f)
+  _7 f = liftLens (_7 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h, Acc i) (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g', Acc h, Acc i) (Acc g) (Acc g')) (fsink1 f)
 
 
 -- Field8
 -- ------
 
 instance (Elt a, Elt b, Elt c, Elt d, Elt e, Elt f, Elt g, Elt h, Elt h') => Field8 (Exp (a,b,c,d,e,f,g,h)) (Exp (a,b,c,d,e,f,g,h')) (Exp h) (Exp h') where
-  _8 f = liftLens (L._8 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h) (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h') (Exp h) (Exp h')) (fsink1 f)
+  _8 f = liftLens (_8 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h) (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h') (Exp h) (Exp h')) (fsink1 f)
 
 instance (Elt a, Elt b, Elt c, Elt d, Elt e, Elt f, Elt g, Elt h, Elt h', Elt i) => Field8 (Exp (a,b,c,d,e,f,g,h,i)) (Exp (a,b,c,d,e,f,g,h',i)) (Exp h) (Exp h') where
-  _8 f = liftLens (L._8 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h, Exp i) (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h', Exp i) (Exp h) (Exp h')) (fsink1 f)
+  _8 f = liftLens (_8 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h, Exp i) (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h', Exp i) (Exp h) (Exp h')) (fsink1 f)
 
 
 instance (Arrays a, Arrays b, Arrays c, Arrays d, Arrays e, Arrays f, Arrays g, Arrays h, Arrays h') => Field8 (Acc (a,b,c,d,e,f,g,h)) (Acc (a,b,c,d,e,f,g,h')) (Acc h) (Acc h') where
-  _8 f = liftLens (L._8 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h) (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h') (Acc h) (Acc h')) (fsink1 f)
+  _8 f = liftLens (_8 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h) (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h') (Acc h) (Acc h')) (fsink1 f)
 
 instance (Arrays a, Arrays b, Arrays c, Arrays d, Arrays e, Arrays f, Arrays g, Arrays h, Arrays h', Arrays i) => Field8 (Acc (a,b,c,d,e,f,g,h,i)) (Acc (a,b,c,d,e,f,g,h',i)) (Acc h) (Acc h') where
-  _8 f = liftLens (L._8 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h, Acc i) (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h', Acc i) (Acc h) (Acc h')) (fsink1 f)
+  _8 f = liftLens (_8 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h, Acc i) (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h', Acc i) (Acc h) (Acc h')) (fsink1 f)
 
 
 -- Field9
 -- ------
 
 instance (Elt a, Elt b, Elt c, Elt d, Elt e, Elt f, Elt g, Elt h, Elt i, Elt i') => Field9 (Exp (a,b,c,d,e,f,g,h,i)) (Exp (a,b,c,d,e,f,g,h,i')) (Exp i) (Exp i') where
-  _9 f = liftLens (L._9 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h, Exp i) (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h, Exp i') (Exp i) (Exp i')) (fsink1 f)
+  _9 f = liftLens (_9 :: Lens (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h, Exp i) (Exp a, Exp b, Exp c, Exp d, Exp e, Exp f, Exp g, Exp h, Exp i') (Exp i) (Exp i')) (fsink1 f)
 
 
 instance (Arrays a, Arrays b, Arrays c, Arrays d, Arrays e, Arrays f, Arrays g, Arrays h, Arrays i, Arrays i') => Field9 (Acc (a,b,c,d,e,f,g,h,i)) (Acc (a,b,c,d,e,f,g,h,i')) (Acc i) (Acc i') where
-  _9 f = liftLens (L._9 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h, Acc i) (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h, Acc i') (Acc i) (Acc i')) (fsink1 f)
+  _9 f = liftLens (_9 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h, Acc i) (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h, Acc i') (Acc i) (Acc i')) (fsink1 f)
 
 
 
