@@ -1,8 +1,5 @@
-{-# LANGUAGE CPP                   #-}
-{-# LANGUAGE FlexibleContexts      #-}
 {-# LANGUAGE FlexibleInstances     #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
-{-# LANGUAGE ViewPatterns          #-}
 {-# OPTIONS_GHC -fno-warn-orphans #-}
 -----------------------------------------------------------------------------
 -- |
@@ -24,19 +21,8 @@ module Data.Array.Accelerate.Control.Lens.Tuple (
 
 import Control.Lens
 import Control.Lens.Tuple
-import Data.Array.Accelerate                            as A
-
-
-#if defined(MIN_VERSION_accelerate)
-#if !MIN_VERSION_accelerate(0,16,0)
--- Instances that missed the 0.15* Hackage release
-instance Unlift Exp (Exp e) where
-  unlift = id
-
-instance Unlift Acc (Acc a) where
-  unlift = id
-#endif
-#endif
+import Data.Array.Accelerate
+import Data.Array.Accelerate.Control.Lens.Lift
 
 
 -- Field1
@@ -347,25 +333,4 @@ instance (Elt a, Elt b, Elt c, Elt d, Elt e, Elt f, Elt g, Elt h, Elt i, Elt i')
 
 instance (Arrays a, Arrays b, Arrays c, Arrays d, Arrays e, Arrays f, Arrays g, Arrays h, Arrays i, Arrays i') => Field9 (Acc (a,b,c,d,e,f,g,h,i)) (Acc (a,b,c,d,e,f,g,h,i')) (Acc i) (Acc i') where
   _9 f = liftLens (_9 :: Lens (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h, Acc i) (Acc a, Acc b, Acc c, Acc d, Acc e, Acc f, Acc g, Acc h, Acc i') (Acc i) (Acc i')) (fsink1 f)
-
-
-
--- | Lift a 'Lens' into Accelerate terms
---
-liftLens
-    :: (Functor f, Unlift box s, Unlift box t)
-    => (l -> s -> f t)
-    -> l
-    -> box (Plain s)
-    -> f (box (Plain t))
-liftLens l f (unlift -> x) = lift `fmap` l f x
-
-
--- | Sink a unary functor from Accelerate terms
---
-fsink1 :: (Functor f, Unlift box b, Lift box a)
-       => (box (Plain a) -> f (box (Plain b)))
-       -> a
-       -> f b
-fsink1 f = fmap unlift . f . lift
 

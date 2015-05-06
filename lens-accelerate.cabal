@@ -21,6 +21,9 @@ library
     Data.Array.Accelerate.Control.Lens
     Data.Array.Accelerate.Control.Lens.Tuple
 
+  other-modules:
+    Data.Array.Accelerate.Control.Lens.Lift
+
   build-depends:
       base                 >= 4.7       && <4.9
     , accelerate           >= 0.15
