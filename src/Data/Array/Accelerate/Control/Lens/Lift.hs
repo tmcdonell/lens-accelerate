@@ -1,6 +1,5 @@
 {-# LANGUAGE CPP                   #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
-{-# LANGUAGE ViewPatterns          #-}
 -----------------------------------------------------------------------------
 -- |
 -- Module      : Data.Array.Accelerate.Control.Lens.Lift
@@ -13,7 +12,7 @@
 --
 ----------------------------------------------------------------------------
 
-module Data.Array.Accelerate.Control.Lens.Lift
+module Data.Array.Accelerate.Control.Lens.Lift ( liftLens )
   where
 
 import Data.Array.Accelerate
@@ -30,15 +29,16 @@ instance Unlift Acc (Acc a) where
 #endif
 #endif
 
--- | Lift a 'Lens' into Accelerate terms
+
+-- Lift a 'Lens' into Accelerate terms
 --
 liftLens
-    :: (Functor f, Unlift box s, Unlift box t)
-    => (l -> s -> f t)
-    -> l
+    :: (Functor f, Unlift box s, Unlift box t, Unlift box b, Lift box a)
+    => ((a -> f b) -> s -> f t)
+    -> (box (Plain a) -> f (box (Plain b)))
     -> box (Plain s)
     -> f (box (Plain t))
-liftLens l f (unlift -> x) = lift `fmap` l f x
+liftLens l f x = lift `fmap` l (fsink1 f) (unlift x)
 
 
 -- | Sink a unary functor from Accelerate terms
