@@ -26,9 +26,9 @@ library
     Data.Array.Accelerate.Control.Lens.Lift
 
   build-depends:
-      base                 >= 4.7       && <4.9
+      base                 >= 4.7 && < 4.10
     , accelerate           >= 0.15
-    , lens                 >= 4         && < 5
+    , lens                 == 4.*
 
   ghc-options:          -Wall
 
@@ -40,3 +40,4 @@ source-repository head
   Type:                 git
   Location:             git://github.com/tmcdonell/lens-accelerate.git
 
+-- vim: nospell
