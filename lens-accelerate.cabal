@@ -40,4 +40,9 @@ source-repository head
   Type:                 git
   Location:             git://github.com/tmcdonell/lens-accelerate.git
 
+source-repository this
+  Type:                 git
+  Tag:                  0.1.0.0
+  Location:             git://github.com/tmcdonell/lens-accelerate.git
+
 -- vim: nospell
