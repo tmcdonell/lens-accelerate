@@ -26,7 +26,7 @@ library
     Data.Array.Accelerate.Control.Lens.Lift
 
   build-depends:
-      base                 >= 4.7 && < 4.10
+      base                 >= 4.7 && < 4.11
     , accelerate           >= 0.15
     , lens                 == 4.*
 
