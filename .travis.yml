@@ -10,6 +10,11 @@ sudo: false
 cache:
   directories:
     - $HOME/.stack
+    - .stack-work/install
+
+before_cache:
+  - rm -rf $(stack path --local-install-root)/bin
+  - rm -rf $(stack path --local-install-root)/doc
 
 matrix:
   include:
