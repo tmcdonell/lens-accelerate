@@ -30,7 +30,10 @@ instance Unlift Acc (Acc a) where
 #endif
 
 
--- Lift a 'Lens' into Accelerate terms
+-- | Lift a 'Lens' into a lens on the equivalent Accelerate term.
+--
+-- The instances exported by this package are all defined in terms of this
+-- function, using the definitions from the base @lens@ package.
 --
 liftLens
     :: (Functor f, Unlift box s, Unlift box t, Unlift box b, Lift box a)
