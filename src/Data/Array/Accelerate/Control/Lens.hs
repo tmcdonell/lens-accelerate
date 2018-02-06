@@ -21,5 +21,6 @@ import Control.Lens
 import Data.Array.Accelerate.Control.Lens.Lift
 
 import Data.Array.Accelerate.Control.Lens.Each ()
+import Data.Array.Accelerate.Control.Lens.Shape ()
 import Data.Array.Accelerate.Control.Lens.Tuple ()
 

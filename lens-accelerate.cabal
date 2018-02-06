@@ -20,6 +20,7 @@ library
   exposed-modules:
     Data.Array.Accelerate.Control.Lens
     Data.Array.Accelerate.Control.Lens.Each
+    Data.Array.Accelerate.Control.Lens.Shape
     Data.Array.Accelerate.Control.Lens.Tuple
 
   other-modules:
