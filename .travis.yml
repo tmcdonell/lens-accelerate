@@ -3,9 +3,11 @@
 # Basic template to test with GHC=[7.8, 7.10, 8.0]. Caches the 'stack' build
 # directory to speed subsequent compilations.
 #
+# https://docs.travis-ci.com/user/reference/overview/
+#
 language: generic
 dist: trusty
-sudo: false
+sudo: required
 
 cache:
   directories:
@@ -47,21 +49,11 @@ install:
   - echo "$(ghc --version) [$(ghc --print-project-git-commit-id 2> /dev/null || echo '?')]"
   - cabal --version
   - stack --version
-  - |
-      if [ ${GHC} == head -o ! -e stack.yaml ]; then
-        travis_retry cabal install --only-dependencies
-      else
-        travis_retry stack build --only-dependencies --fast --no-terminal --no-haddock-deps
-      fi
+  - stack build --dry-run
+  - travis_retry travis_wait 60 stack build --fast --jobs=2 --no-terminal --only-dependencies
 
 script:
-  - |
-      if [ ${GHC} == head -o ! -e stack.yaml ]; then
-        cabal install
-        cabal haddock
-      else
-        stack build --fast --no-terminal --haddock --no-haddock-deps
-      fi
+  - stack build --fast --jobs=2 --no-terminal --haddock --no-haddock-deps
 
 after_success:
   - source .travis/update-accelerate-buildbot.sh
