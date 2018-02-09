@@ -28,7 +28,7 @@ library
 
   build-depends:
       base                 >= 4.7 && < 4.11
-    , accelerate           >= 1.2
+    , accelerate           >= 1.0
     , lens                 == 4.*
 
   ghc-options:
