@@ -1,4 +1,6 @@
+{-# LANGUAGE FlexibleContexts      #-}
 {-# LANGUAGE FlexibleInstances     #-}
+{-# LANGUAGE MonoLocalBinds        #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# OPTIONS_GHC -fno-warn-orphans #-}
 -----------------------------------------------------------------------------
@@ -26,7 +28,7 @@ import Data.Array.Accelerate.Data.Complex
 import Data.Array.Accelerate.Control.Lens.Lift
 
 
-instance (Elt a, Elt b) => Each (Exp (Complex a)) (Exp (Complex b)) (Exp a) (Exp b) where
+instance (Elt a, Elt b, Elt (Complex a), Elt (Complex b)) => Each (Exp (Complex a)) (Exp (Complex b)) (Exp a) (Exp b) where
   each = liftLens (each :: Traversal (Complex (Exp a)) (Complex (Exp b)) (Exp a) (Exp b))
 
 instance (Elt a, Elt b) => Each (Exp (a,a)) (Exp (b,b)) (Exp a) (Exp b) where
