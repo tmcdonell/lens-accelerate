@@ -5,17 +5,17 @@
 #
 # https://docs.travis-ci.com/user/reference/overview/
 #
-language: minimal
-dist: trusty
-sudo: required
+language: c
 
 cache:
+  timeout: 600
   directories:
     - $HOME/.stack/snapshots
+    - $HOME/.local/bin
     - .stack-work/install
 
 before_cache:
-  - rm -rf $(stack path --local-install-root)/bin
+  # - rm -rf $(stack path --local-install-root)/bin
   - rm -rf $(stack path --local-install-root)/doc
 
 addons:
@@ -32,9 +32,9 @@ compiler:
   - GHC-8.2.2
   - GHC-8.0.2
 
-env:
-  # global:
-  # matrix:
+# env:
+#   global:
+#   matrix:
 
 matrix:
   # include:
