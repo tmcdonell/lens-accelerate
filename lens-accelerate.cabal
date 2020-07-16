@@ -13,8 +13,8 @@ build-type:             Simple
 cabal-version:          >=1.10
 
 extra-source-files:
-    README.markdown
-    CHANGELOG.markdown
+    README.md
+    CHANGELOG.md
 
 library
   exposed-modules:
