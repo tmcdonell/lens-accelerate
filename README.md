@@ -14,6 +14,10 @@
 
 Instances to mix [lens][lens] with [accelerate][accelerate].
 
+Contributions and bug reports are welcome!<br>
+Please feel free to contact me through GitHub or [gitter.im][gitter.im].
+
  [lens]:                https://github.com/ekmett/lens
  [accelerate]:          https://github.com/AccelerateHS/accelerate
+ [gitter.im]:           https://gitter.im/AccelerateHS/Lobby
 
