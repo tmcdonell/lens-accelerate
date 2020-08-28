@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and the
 project adheres to the [Haskell Package Versioning
 Policy (PVP)](https://pvp.haskell.org)
 
+## [0.3.0.0] - 2020-08-26
+### Changed
+  * update for accelerate-1.3
+
 ## [0.2.0.0] - 2018-04-03
 ### Added
   * `Field` instances for `Shape`s, where `_1` is the right-most component of
@@ -18,5 +22,6 @@ Policy (PVP)](https://pvp.haskell.org)
 
   * Initial release
 
+[0.3.0.0]:  https://github.com/tmcdonell/lens-accelerate/compare/0.2.0.0...v0.3.0.0
 [0.2.0.0]:  https://github.com/tmcdonell/lens-accelerate/compare/0.1.0.0...0.2.0.0
 
