@@ -1,6 +1,6 @@
 name:                   lens-accelerate
 version:                0.3.0.0
-synopsis:               Instances to mix lens with accelerate
+synopsis:               Instances to mix lens with Accelerate
 description:            Please see the README on GitHub at <https://github.com/tmcdonell/lens-accelerate#readme>
 homepage:               https://github.com/tmcdonell/lens-accelerate
 license:                BSD3
