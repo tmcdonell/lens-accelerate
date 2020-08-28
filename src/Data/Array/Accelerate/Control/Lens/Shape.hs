@@ -8,10 +8,10 @@
 -----------------------------------------------------------------------------
 -- |
 -- Module      : Data.Array.Accelerate.Control.Lens.Shape
--- Copyright   : 2015 Trevor L. McDonell
+-- Copyright   : [2015..2020] Trevor L. McDonell
 -- License     : BSD-style (see the file LICENSE)
 --
--- Maintainer  : Trevor L. McDonell <tmcdonell@cse.unsw.edu.au>
+-- Maintainer  : Trevor L. McDonell <trevor.mcdonell@gmail.com>
 -- Stability   : experimental
 -- Portability : non-portable
 --

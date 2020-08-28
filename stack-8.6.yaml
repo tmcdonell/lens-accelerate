@@ -7,8 +7,7 @@ packages:
 - .
 
 extra-deps:
-- github: tmcdonell/accelerate
-  commit: eeb3765535f039909fda3e859d200a6560ff3433
+- accelerate-1.3.0.0
 
 # Override default flag values for local packages and extra-deps
 # flags: {}
