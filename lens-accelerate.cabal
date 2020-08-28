@@ -1,14 +1,13 @@
 name:                   lens-accelerate
 version:                0.3.0.0
 synopsis:               Instances to mix lens with accelerate
-description:            Instances to mix lens with accelerate
+description:            Please see the README on GitHub at <https://github.com/tmcdonell/lens-accelerate#readme>
 homepage:               https://github.com/tmcdonell/lens-accelerate
 license:                BSD3
 license-file:           LICENSE
 author:                 Trevor L. McDonell
-maintainer:             Trevor L. McDonell <tmcdonell@cse.unsw.edu.au>
-copyright:              Trevor L. McDonell
-category:               Data, Lenses
+maintainer:             Trevor L. McDonell <trevor.mcdonell@gmail.com>
+category:               Accelerate, Data, Lenses
 build-type:             Simple
 cabal-version:          >=1.10
 
@@ -47,7 +46,7 @@ source-repository head
 
 source-repository this
   Type:                 git
-  Tag:                  0.3.0.0
+  Tag:                  v0.3.0.0
   Location:             git://github.com/tmcdonell/lens-accelerate.git
 
 -- vim: nospell
